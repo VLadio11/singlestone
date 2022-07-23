@@ -1,12 +1,11 @@
-const Koa = require('koa');
-var Router = require('koa-router');
-const { ContactManager, handle } = require('./src/contacts');
-const app = new Koa();
+const express = require('express')
+const app = express()
+const port = 3000
 
-const router = Router();
+app.get('/contact', (req, res) => {
+  res.send('Hello World!')
+})
 
-router.get('contacts', ContactManager.handle);
-
-app.use(router.routes());
-app.use(router.allowedMethods());
-app.listen(3000);
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
