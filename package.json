@@ -1,21 +1,22 @@
 {
-  "name": "api-build",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dockerbuild": "docker build -t rezhelp-backend .",
-    "generate-code": "openapi-generator-cli generate -i docs/swagger.yaml -g typescript-node -o src --additional-properties=ngVersion=6.1.7,npmName=restClient,supportsES6=true,npmVersion=6.9.0,withInterfaces=true"
-  },
+  "name": "singlestone",
+  "version": "0.0.1",
+  "private": true,
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.3"
+  "description": "a lightweight CRUD app",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
   },
-  "devDependencies": {
-    "pdf-to-png-converter": "^0.2.2"
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "joi": "^17.6.0",
+    "koa": "^2.13.4",
+    "koa-router": "^12.0.0",
+    "nodemon": "^2.0.19"
   }
 }
