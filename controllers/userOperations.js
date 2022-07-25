@@ -1,5 +1,5 @@
-var loki = require('lokijs'), db = new loki('test.json');
-var users = db.addCollection('users');
+const loki = require('lokijs'), db = new loki('test.json');
+const users = db.addCollection('users');
 const validateInput = require('../helpers/validation')
 let idCounter = 0;
 
