@@ -35,7 +35,6 @@ const validateInput = (schema, input) => {
     } else {
         return parameterIdValidation.validate(input);
     }
-
 }
 
 module.exports = validateInput;
